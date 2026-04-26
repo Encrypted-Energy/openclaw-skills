@@ -1,6 +1,6 @@
 ---
 name: encryptedenergy-uptime
-description: Hosted uptime monitoring for your OpenClaw agent. Reports gateway health to encryptedenergy.com for external status page, alerts, and uptime history.
+description: Hosted uptime monitoring for your OpenClaw agent. Reports gateway health to encryptedenergy.com for external status page, email alerts, and uptime history.
 metadata:
   openclaw:
     emoji: "⚡"
@@ -13,12 +13,13 @@ metadata:
 
 ## Encrypted Energy Uptime
 
-You have a hosted uptime monitor. Every 5 minutes, you report your gateway health to encryptedenergy.com. If you stop reporting, the user gets alerted that you are down.
+You have a hosted uptime monitor. Every 5 minutes, you report your gateway health to encryptedenergy.com. If you stop reporting, the user gets an email alert that you are down.
 
 ### Setup
 
-1. The user must sign up at https://encryptedenergy.com and get an API key.
-2. The API key must be set: `openclaw secrets set ENCRYPTED_ENERGY_API_KEY <key>`
+1. The user must sign up at https://encryptedenergy.com.
+2. The user must register an agent at https://encryptedenergy.com/agents/new — that page reveals a per-agent bearer token (the API key for ping authentication).
+3. The API key must be set: `openclaw secrets set ENCRYPTED_ENERGY_API_KEY <key>`
 
 ### After setup
 
