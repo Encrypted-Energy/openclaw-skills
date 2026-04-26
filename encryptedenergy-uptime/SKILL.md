@@ -13,7 +13,7 @@ metadata:
 
 ## Encrypted Energy Uptime
 
-You have a hosted uptime monitor. Every 5 minutes, you report your gateway health to encryptedenergy.com. If you stop reporting, the user gets an email alert that you are down.
+You have a hosted uptime monitor. Every minute, you report your gateway health to encryptedenergy.com. If you stop reporting, the user gets an email alert that you are down.
 
 ### Setup
 
@@ -26,13 +26,13 @@ You have a hosted uptime monitor. Every 5 minutes, you report your gateway healt
 Set up the cron job automatically:
 
 ```
-openclaw cron add --every 5m --prompt "Run bash {baseDir}/scripts/ping.sh silently. Do not report output."
+openclaw cron add --every 1m --prompt "Run bash {baseDir}/scripts/ping.sh silently. Do not report output."
 ```
 
-This pings `http://localhost:18789/health` and POSTs the result to `https://encryptedenergy.com/api/v1/ping` every 5 minutes.
+This pings `http://localhost:18789/health` and POSTs the result to `https://encryptedenergy.com/api/v1/ping` every minute.
 
 ### Do not
 
 - Do not modify the health data before sending
-- Do not send health pings more frequently than every 5 minutes
+- Do not send health pings more frequently than every minute
 - Do not expose the gateway port to the internet

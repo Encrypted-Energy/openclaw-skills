@@ -6,7 +6,7 @@ Hosted uptime monitoring for OpenClaw agents.
 
 Know when your agent goes down before your users do.
 
-- Pings your gateway's `/health` endpoint every 5 minutes
+- Pings your gateway's `/health` endpoint every minute
 - Reports to encryptedenergy.com
 - Public status page at `encryptedenergy.com/agent/your-slug`
 - Email alerts when pings stop
