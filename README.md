@@ -4,15 +4,15 @@ Hosted uptime monitoring for OpenClaw agents.
 
 ## encryptedenergy-uptime
 
-Know when your agent goes down before your users do. 
+Know when your agent goes down before your users do.
 
-- Pings your gateway's `/health` endpoint every 5 minutes
+- Pings your gateway's `/health` endpoint every minute
 - Reports to encryptedenergy.com
-- Status page at `encryptedenergy.com/your-agent`
-- Alerts via Telegram, Discord, or email when pings stop
-- Optional Bitcoin-anchored uptime proofs via OpenTimestamps
+- Public status page at `encryptedenergy.com/agent/your-slug`
+- Email alerts when pings stop
 
 ### Install
+
 ```
 openclaw skills install encryptedenergy-uptime
 ```
@@ -20,8 +20,13 @@ openclaw skills install encryptedenergy-uptime
 ### Setup
 
 1. Sign up at [encryptedenergy.com](https://encryptedenergy.com)
-2. Copy your API key
-3. `openclaw secrets set ENCRYPTED_ENERGY_API_KEY <your-key>`
+2. Register an agent at [encryptedenergy.com/agents/new](https://encryptedenergy.com/agents/new) — you'll get a bearer token tied to that agent
+3. `openclaw secrets set ENCRYPTED_ENERGY_API_KEY <your-token>`
+
+### Roadmap
+
+- Telegram, Discord, and webhook alert channels (currently email only)
+- Bitcoin-anchored uptime proofs via OpenTimestamps (paid tier)
 
 ### Learn more
 
