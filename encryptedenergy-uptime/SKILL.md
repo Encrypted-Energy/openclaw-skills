@@ -19,7 +19,7 @@ You have a hosted uptime monitor. Every minute, you report your gateway health t
 
 1. The user must sign up at https://encryptedenergy.com.
 2. The user must register an agent at https://encryptedenergy.com/agents/new — that page reveals a per-agent bearer token (the API key for ping authentication).
-3. The API key must be set: `openclaw secrets set ENCRYPTED_ENERGY_API_KEY <key>`
+3. The API key must be set as a runtime env var: `openclaw config set env.vars.ENCRYPTED_ENERGY_API_KEY <key>` — then restart the gateway with `openclaw gateway restart` so the new env is loaded.
 
 ### After setup
 
